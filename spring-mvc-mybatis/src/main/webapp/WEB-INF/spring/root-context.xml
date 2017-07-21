@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xmlns:mybatis="http://mybatis.org/schema/mybatis-spring"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <!--数据源-->
+    <!--内存数据库-->
+    <jdbc:embedded-database id="dataSource" type="HSQL">
+        <jdbc:script location="classpath:db-scripts/hsql/db-schema.sql"/>
+        <!--<jdbc:script location="classpath:db-scripts/hsql/data.sql"/>-->
+    </jdbc:embedded-database>
+
+    <!--sqlSessionFactory-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"></property>
+        <property name="typeAliasesPackage" value="com.oracle.spring.domain"/>
+        <property name="mapperLocations" value="classpath:com/oracle/spring/mapper/*.xml"></property>
+        <!--<property name="configLocation" value="classpath:mybatis/mybatis-config.xml"></property>-->
+        </bean>
+
+    <!--扫描方式创建mapper-->
+    <mybatis:scan base-package="com.oracle.spring.mapper"/>
+
+    <!--扫描创建service, mapper -->
+    <context:component-scan base-package="com.oracle.spring">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+</beans>

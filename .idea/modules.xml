@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/02 Spring Web MVC.iml" filepath="$PROJECT_DIR$/.idea/02 Spring Web MVC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-mvc/spring-mvc.iml" filepath="$PROJECT_DIR$/spring-mvc/spring-mvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-mvc-jdbc/spring-mvc-jdbc.iml" filepath="$PROJECT_DIR$/spring-mvc-jdbc/spring-mvc-jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-mvc-jpa/spring-mvc-jpa.iml" filepath="$PROJECT_DIR$/spring-mvc-jpa/spring-mvc-jpa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-mvc-mybatis/spring-mvc-mybatis.iml" filepath="$PROJECT_DIR$/spring-mvc-mybatis/spring-mvc-mybatis.iml" />
+    </modules>
+  </component>
+</project>
