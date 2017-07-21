@@ -20,7 +20,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.FileCopyUtils;
 
 /**
- * 测试spring_projects...........
+ * 测试spring_projects............................................................
  */
 @Component
 public class ApplicationContextRefreshedListener implements ApplicationListener<ContextRefreshedEvent> {
