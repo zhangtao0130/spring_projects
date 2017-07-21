@@ -19,6 +19,9 @@ import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
 import org.springframework.util.FileCopyUtils;
 
+/**
+ * 测试.。。。。
+ */
 @Component
 public class ApplicationContextRefreshedListener implements ApplicationListener<ContextRefreshedEvent> {
 
